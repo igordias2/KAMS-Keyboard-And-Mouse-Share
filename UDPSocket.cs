@@ -3,6 +3,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 
+
 namespace KAMS_Keyboard_And_Mouse_Share
 {
 
@@ -34,12 +35,23 @@ namespace KAMS_Keyboard_And_Mouse_Share
 
         public void Send(string text)
         {
+
             byte[] data = Encoding.ASCII.GetBytes(text);
             _socket.BeginSend(data, 0, data.Length, SocketFlags.None, (ar) =>
             {
                 State so = (State)ar.AsyncState;
                 int bytes = _socket.EndSend(ar);
                 Console.WriteLine("SEND: {0}, {1}", bytes, text);
+            }, state);
+        }
+        public void Send(byte c)
+        {
+            byte[] data = new byte[c];
+            _socket.BeginSend(data, 0, data.Length, SocketFlags.None, (ar) =>
+            {
+                State so = (State)ar.AsyncState;
+                int bytes = _socket.EndSend(ar);
+                Console.WriteLine("SEND: {0}, {1}", bytes, data);
             }, state);
         }
 
@@ -50,8 +62,12 @@ namespace KAMS_Keyboard_And_Mouse_Share
                 State so = (State)ar.AsyncState;
                 int bytes = _socket.EndReceiveFrom(ar, ref epFrom);
                 _socket.BeginReceiveFrom(so.buffer, 0, bufSize, SocketFlags.None, ref epFrom, recv, so);
-                Console.WriteLine("RECV: {0}: {1}, {2}", epFrom.ToString(), bytes, Encoding.ASCII.GetString(so.buffer, 0, bytes));
+                //Keyboard.ScanCodeShort k = (int)0;//(int)so.buffer[0];
+                
+                //Console.WriteLine("RECV: {0}: {1}, {2}", epFrom.ToString(), bytes, Encoding.ASCII.GetString(so.buffer, 0, bytes));
             }, state);
+           // Keyboard.ScanCodeShort k = (int)0;
+            //Keyboard.Send(k);
         }
     }
 }
