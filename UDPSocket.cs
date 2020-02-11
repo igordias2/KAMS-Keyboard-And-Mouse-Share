@@ -67,10 +67,10 @@ namespace KAMS_Keyboard_And_Mouse_Share
                 _socket.BeginReceiveFrom(so.buffer, 0, bufSize, SocketFlags.None, ref epFrom, recv, so);
                 //Keyboard.ScanCodeShort k = (int)0;//(int)so.buffer[0];
                 VirtualKeyCode key =  (VirtualKeyCode) (int)so.buffer[0];
-               
+
                 //key = 
                 input.Keyboard.KeyPress(key);
-                //Console.WriteLine("RECV: {0}: {1}, {2}", epFrom.ToString(), bytes, Encoding.ASCII.GetString(so.buffer, 0, bytes));
+                Console.WriteLine("RECV: {0}: {1}, {2}", epFrom.ToString(), bytes, Encoding.ASCII.GetString(so.buffer, 0, bytes));
             }, state);
            // Keyboard.ScanCodeShort k = (int)0;
             //Keyboard.Send(k);
