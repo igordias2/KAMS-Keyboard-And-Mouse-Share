@@ -1,0 +1,11 @@
+/Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/bin/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share
+/Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/bin/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.deps.json
+/Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/bin/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.runtimeconfig.json
+/Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/bin/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.runtimeconfig.dev.json
+/Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/bin/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.dll
+/Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/bin/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.pdb
+/Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/obj/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.csprojAssemblyReference.cache
+/Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/obj/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.AssemblyInfoInputs.cache
+/Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/obj/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.AssemblyInfo.cs
+/Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/obj/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.dll
+/Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/obj/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.pdb
