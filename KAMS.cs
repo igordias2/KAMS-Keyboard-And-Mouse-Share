@@ -21,7 +21,9 @@ namespace KAMS_Keyboard_And_Mouse_Share
             {
                 UDPSocket server = new UDPSocket();
                 server.Server("0.0.0.0", 2727);
-
+                while(true){
+                    
+                }
             }   
             else
             {
