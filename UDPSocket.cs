@@ -17,7 +17,6 @@ namespace KAMS_Keyboard_And_Mouse_Share
         private EndPoint epFrom = new IPEndPoint(IPAddress.Any, 0);
         private AsyncCallback recv = null;
 
-        InputSimulator input = new InputSimulator();
         public class State
         {
             public byte[] buffer = new byte[bufSize];
@@ -67,11 +66,10 @@ namespace KAMS_Keyboard_And_Mouse_Share
                 _socket.BeginReceiveFrom(so.buffer, 0, bufSize, SocketFlags.None, ref epFrom, recv, so);
                 //Keyboard.ScanCodeShort k = (int)0;//(int)so.buffer[0];
                 VirtualKeyCode key =  (VirtualKeyCode) (int)so.buffer[0];
-
-                //key = 
+                InputSimulator input = new InputSimulator();
                 input.Keyboard.KeyPress(key);
                 
-                Console.WriteLine("RECV: {0}: {1}, {2}, {3}", epFrom.ToString(), bytes, Encoding.ASCII.GetString(so.buffer, 0, bytes), key.ToString());
+                Console.WriteLine("RECV: {0}: {1}, {2}", epFrom.ToString(), bytes, Encoding.ASCII.GetString(so.buffer, 0, bytes));
             }, state);
            // Keyboard.ScanCodeShort k = (int)0;
             //Keyboard.Send(k);
