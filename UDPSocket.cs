@@ -57,18 +57,28 @@ namespace KAMS_Keyboard_And_Mouse_Share
             }, state);
         }
 
-        private void Receive()
+        public void Receive()
         {            
             _socket.BeginReceiveFrom(state.buffer, 0, bufSize, SocketFlags.None, ref epFrom, recv = (ar) =>
             {
                 State so = (State)ar.AsyncState;
                 int bytes = _socket.EndReceiveFrom(ar, ref epFrom);
                 _socket.BeginReceiveFrom(so.buffer, 0, bufSize, SocketFlags.None, ref epFrom, recv, so);
-                //Keyboard.ScanCodeShort k = (int)0;//(int)so.buffer[0];
-                VirtualKeyCode key =  (VirtualKeyCode) (int)so.buffer[0];
-                InputSimulator input = new InputSimulator();
-                input.Keyboard.KeyPress(key);
+                Keyboard.ScanCodeShort k = (Keyboard.ScanCodeShort)(int)so.buffer[0];//(int)so.buffer[0];
+                Keyboard.INPUT[] Inputs = new Keyboard.INPUT[1];
+                Keyboard.INPUT Input = new Keyboard.INPUT();
+                Input.type = 1; // 1 = Keyboard Input
+                Input.U.ki.wScan = k;
+                Input.U.ki.dwFlags = Keyboard.KEYEVENTF.SCANCODE;
+                Inputs[0] = Input;
+                Keyboard.SendInput(1, Inputs, Keyboard.INPUT.Size);
+                // Keyboard.Send(k);
+                // VirtualKeyCode key =  (VirtualKeyCode) (int)so.buffer[0];
+                // InputSimulator input = new InputSimulator();
+                // input.Keyboard.KeyPress(key);
                 
+
+
                 Console.WriteLine("RECV: {0}: {1}, {2}", epFrom.ToString(), bytes, Encoding.ASCII.GetString(so.buffer, 0, bytes));
             }, state);
            // Keyboard.ScanCodeShort k = (int)0;
