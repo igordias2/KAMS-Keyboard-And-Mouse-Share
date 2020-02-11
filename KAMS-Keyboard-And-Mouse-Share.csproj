@@ -6,4 +6,8 @@
     <RootNamespace>KAMS_Keyboard_And_Mouse_Share</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="GregsStack.InputSimulatorStandard" Version="1.1.1" />
+  </ItemGroup>
+
 </Project>

@@ -9,3 +9,5 @@
 /Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/obj/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.AssemblyInfo.cs
 /Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/obj/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.dll
 /Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/obj/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.pdb
+/Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/bin/Debug/netcoreapp3.1/GregsStack.InputSimulatorStandard.dll
+/Users/igordias/projects/KAMS-Keyboard-And-Mouse-Share/obj/Debug/netcoreapp3.1/KAMS-Keyboard-And-Mouse-Share.csproj.CopyComplete

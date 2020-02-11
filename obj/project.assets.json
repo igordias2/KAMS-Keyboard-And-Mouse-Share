@@ -1,11 +1,37 @@
 {
   "version": 3,
   "targets": {
-    ".NETCoreApp,Version=v3.1": {}
+    ".NETCoreApp,Version=v3.1": {
+      "GregsStack.InputSimulatorStandard/1.1.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/GregsStack.InputSimulatorStandard.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GregsStack.InputSimulatorStandard.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "GregsStack.InputSimulatorStandard/1.1.1": {
+      "sha512": "RTE+TycnY+ItWv2wtLIgc+jSBWAcCtfq2Bt6AlpSunIfOqbfUXECApqxP002q4ktCYNkgEb2hMerpoyVZIlOWA==",
+      "type": "package",
+      "path": "gregsstack.inputsimulatorstandard/1.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "gregsstack.inputsimulatorstandard.1.1.1.nupkg.sha512",
+        "gregsstack.inputsimulatorstandard.nuspec",
+        "lib/netstandard2.0/GregsStack.InputSimulatorStandard.dll"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETCoreApp,Version=v3.1": []
+    ".NETCoreApp,Version=v3.1": [
+      "GregsStack.InputSimulatorStandard >= 1.1.1"
+    ]
   },
   "packageFolders": {
     "/Users/igordias/.nuget/packages/": {}
@@ -41,6 +67,12 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "dependencies": {
+          "GregsStack.InputSimulatorStandard": {
+            "target": "Package",
+            "version": "[1.1.1, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
