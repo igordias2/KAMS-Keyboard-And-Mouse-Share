@@ -70,7 +70,8 @@ namespace KAMS_Keyboard_And_Mouse_Share
 
                 //key = 
                 input.Keyboard.KeyPress(key);
-                Console.WriteLine("RECV: {0}: {1}, {2}", epFrom.ToString(), bytes, Encoding.ASCII.GetString(so.buffer, 0, bytes));
+                
+                Console.WriteLine("RECV: {0}: {1}, {2}, {3}", epFrom.ToString(), bytes, Encoding.ASCII.GetString(so.buffer, 0, bytes), key);
             }, state);
            // Keyboard.ScanCodeShort k = (int)0;
             //Keyboard.Send(k);
